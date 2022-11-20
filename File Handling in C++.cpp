@@ -34,6 +34,10 @@ input stream      data----> from file to program varible
 */
 
 #include <iostream>
+
+#include <fstream>
+#include <conio.h>
+
 using namespace std;
 
 
@@ -41,7 +45,28 @@ int main()
 {
     std::cout << "Hello World!\n";
 
-   
+   ofstream fout;  // this is just output stream
+
+   // now create or open file
+
+   fout.open("myFile.dat");
+   getch();
+   //  file will be opened and linked with  fout created ...that ofstream
+   // if its not exist and then fout will create it in that related path
+
+    // file is created in hard disk and then fetched in the RAM
+
+   /*
+    .dat means    data file
+   this is relative path : -   fout.open("File Handling in C++.cpp");
+   this is full/actual path :-  fout.open("D:\All Codes\C C++\cpp\File Handling in C++.cpp");
+    */
+   fout<<"hello !";
+   getch();
+
+   fout.close();
+   getch();
+
 
 }
 
