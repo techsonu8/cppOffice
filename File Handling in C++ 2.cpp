@@ -33,8 +33,6 @@
     input stream      data----> from file to program varible
     */
 
-
-// cin and cout is associated with keyboard
 #include <iostream>
 
 #include <fstream>
@@ -48,12 +46,11 @@ int main()
     std::cout << "Hello World!\n";
 
     ofstream fout;  // this is just output stream
-    // Output File stream
 
     // now create or open file
 
     fout.open("myFile.dat");
-    getch();
+    //getch();
     //  file will be opened and linked with  fout created ...that ofstream
     // if its not exist and then fout will create it in that related path
 
@@ -65,13 +62,10 @@ int main()
     this is full/actual path :-  fout.open("D:\All Codes\C C++\cpp\File Handling in C++.cpp");
      */
     fout << "hello !";
-    // stream of char getiing in fout and then in file
-    // it is just space separated    .... if space is there....string after space is not considered
-
-    getch();
+   // getch();
 
     fout.close();
-    getch();
+   // getch();
 
 
 }
