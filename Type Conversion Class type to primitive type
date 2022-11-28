@@ -1,0 +1,82 @@
+// Type Conversion Class type to primitive type.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+/*
+complex c1;
+c1.setData(3,4);
+int x;
+x = c1;
+
+cannot convert from Complex class to int
+this will give error
+
+
+use casting operator 
+syntax:
+
+operator type()    //data type in-which u want to convert
+{
+
+...
+return (type-data)
+
+}
+*/
+
+class Complex
+{
+private:
+    int real, img;
+
+public:
+
+    Complex()
+    {
+        //default constrcutor
+    }
+
+    Complex(int k)
+    {
+        real = k;
+        img = 0;
+    }
+    void setData(int x, int y)
+    {
+        real = x;
+        img = y;
+    }
+
+    void showData()
+    {
+        cout << "The imaginary number is " << real << " + " << img << " i" << endl;
+    }
+
+    operator int()
+    {
+        // logic or any value which u want to return is uy choice
+        return real;
+    }
+};
+
+int main()
+{
+    std::cout << "Hello World!\n";
+    cout << "we will see class to primitive" << endl;
+    Complex c1;
+    c1.setData(3, 4);
+    int x;
+    x = c1; // this means   x = c1.operator int();
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
